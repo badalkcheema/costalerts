@@ -31,7 +31,7 @@ while IFS=$'\t' read -r sub_id sub_name; do
         --body "{
             \"kind\": \"InsightAlert\",
             \"properties\": {
-                \"displayName\": \"${SUBJECT_PREFIX} - ${sub_name}\",
+                \"displayName\": \"${SUBJECT_PREFIX}\",
                 \"status\": \"Enabled\",
                 \"viewId\": \"/subscriptions/${sub_id}/providers/Microsoft.CostManagement/views/ms:DailyCosts\",
                 \"notification\": {
