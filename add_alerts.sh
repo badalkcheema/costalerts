@@ -27,7 +27,7 @@ while IFS=$'\t' read -r sub_id sub_name; do
     echo "  Email: $contact_email"
 
     az rest --method PUT \
-        --uri "https://management.azure.com/subscriptions/${sub_id}/providers/Microsoft.CostManagement/scheduledActions/cost-anomaly-alert-${sub_id}?api-version=2023-11-01" \
+        --uri "https://management.azure.com/subscriptions/${sub_id}/providers/Microsoft.CostManagement/scheduledActions/cost-anomaly-alert?api-version=2023-11-01" \
         --body "{
             \"kind\": \"InsightAlert\",
             \"properties\": {
